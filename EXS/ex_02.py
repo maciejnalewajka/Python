@@ -1,3 +1,4 @@
+# Funkcja sprawdza czy podana liczba jest pierwszą
 def pierwsza(n):
     bool = True
     if n < 1: bool = False
@@ -6,5 +7,3 @@ def pierwsza(n):
             bool = False
             break
     return bool
-
-print(pierwsza(1))

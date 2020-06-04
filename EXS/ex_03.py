@@ -1,3 +1,4 @@
+# Funkcja liczy znaki ciągu znaków
 def policz(s):
     r = 0
     for i in range(0, len(s)):
@@ -7,7 +8,8 @@ def policz(s):
 def policz2(s):
     return len(s)
 
-def policzLiczby(s):
+# Funkcja liczy cyfry w ciągu znaków
+def policzCyfry(s):
     k = 0
     for i in s:
         try:
@@ -17,7 +19,8 @@ def policzLiczby(s):
             pass
     return k
 
-def dodajLiczby(s):
+# Funkcja sumuje cyfry w ciągu znaków
+def dodajCyfry(s):
     k = 0
     for i in s:
         try:
@@ -26,18 +29,17 @@ def dodajLiczby(s):
             pass
     return k
 
+# Funkcja liczy ilość wystąpień podanego znaku w ciągu znaków
 def policzZnak(z, s):
     k = 0
     for i in s:
         if z == i: k += 1
     return k
 
+# Funkcja liczy ilość wystąpień podanego słowa w ciągu znaków
 def policzSlowo(s, str):
     k = 0
     l = len(s)
     for i in range(0, len(str)):
         if s == str[i:i+l]: k += 1
     return k
-
-
-print(policzSlowo("zo", "aloosozozolo"))
