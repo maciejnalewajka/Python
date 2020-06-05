@@ -5,6 +5,11 @@ class Kik:
         self.player1 = player1
         self.player2 = player2
         self.plansza = []
+        self.znak1 = 'x'
+        self.znak2 = 'o'
+
+    def __str__(self):
+        return """Klasa kółko i krzyżyk"""
 
     def initPlansza(self):
         self.plansza = [[[],[],[]],[[],[],[]],[[],[],[]]]
@@ -40,39 +45,34 @@ class Kik:
                 return True
         return False
 
-    def kolko(self, x, y):
+    def znak(self, z):
+        x = self.x()
+        y = self.y()
         if self.plansza[x][y] != []: return False
-        self.plansza[x][y] = 'o'
+        self.plansza[x][y] = z
         return True
 
-    def krzyzyk(self, x, y):
-        if self.plansza[x][y] != []: return False
-        self.plansza[x][y] = 'x'
-        return True
+    def x(self):
+        x = 1
+        return x
 
-    def miejsce(self):
-        k = True
-        while k:
-            # x = rawinput("Podaj x (1 - 3): ")
-            # y = rawinput("Podaj y (1 - 3): ")
-            x = 1
-            y = 1
-    # TODO:         try:
-        #         int(x)
-        #         int(y)
-        #         k = False
-        #     except: pass
-        # return (x-1, y-1)
+    def y(self):
+        y = 1
+        return y
 
 # TODO:
-    # def gra(self):
-    #     p = False
-    #     while p == False:
-    #         k = self.miejsce()
+    def gra(self):
+        p = self.czyWygrana()
+        while p == False:
+            while self.znak(self.znak1): pass
+            p = self.czyWygrana()
+            while self.znak(self.znak2): pass
+            p = self.czyWygrana()
+
+
 
 
 a = Kik()
 a.initPlansza()
-# a.kolko(0,0)
-# a.pokaz()
-a.miejsce()
+a.znak(a.znak1)
+a.pokaz()
