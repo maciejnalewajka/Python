@@ -1,10 +1,12 @@
+import random as r
+
 class Kik:
     """Klasa kółko i krzyżyk"""
 
     def __init__(self, player1 = "", player2 = ""):
-        self.player1 = player1
-        self.player2 = player2
-        self.plansza = []
+        self.player1 = self.playerName()
+        self.player2 = self.playerName()
+        self.plansza = self.initPlansza()
         self.znak1 = 'x'
         self.znak2 = 'o'
 
@@ -12,12 +14,17 @@ class Kik:
         return """Klasa kółko i krzyżyk"""
 
     def initPlansza(self):
-        self.plansza = [[[],[],[]],[[],[],[]],[[],[],[]]]
-        return self.plansza
+        l = [[[],[],[]],[[],[],[]],[[],[],[]]]
+        return l
+
+    def playerName(self):
+        name = ""
+        return name
 
     def pokaz(self):
         for i in range(0, 3):
             print(self.plansza[i])
+        print("")
 
 
     def isEmpty(self):
@@ -53,26 +60,25 @@ class Kik:
         return True
 
     def x(self):
-        x = 1
+        x = r.randint(0, 2)
         return x
 
     def y(self):
-        y = 1
+        y = r.randint(0, 2)
         return y
 
-# TODO:
     def gra(self):
         p = self.czyWygrana()
         while p == False:
-            while self.znak(self.znak1): pass
+            while True:
+                if self.znak(self.znak1): break
             p = self.czyWygrana()
-            while self.znak(self.znak2): pass
+            self.pokaz()
+            while True:
+                if self.znak(self.znak2): break
             p = self.czyWygrana()
-
-
-
+            self.pokaz()
 
 a = Kik()
 a.initPlansza()
-a.znak(a.znak1)
-a.pokaz()
+a.gra()
