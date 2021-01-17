@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[23]:
-
-
 def selection_sort(L):
     for i in range(len(L) - 1):
         minIndx = i
@@ -16,4 +10,3 @@ def selection_sort(L):
             j += 1
         L[i], L[minIndx] = L[minIndx], L[i]
     return L
-

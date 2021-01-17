@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[12]:
-
-
 def wysz_bin(lista, item):
     first = 0
     last = len(lista)-1
@@ -16,5 +10,3 @@ def wysz_bin(lista, item):
         else:
             first = mid+1
     return False
-        
-

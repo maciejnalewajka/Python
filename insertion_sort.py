@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 def insertion_sort(lista):
     for i in range(1, len(lista)):
         Val = lista[i]
@@ -13,4 +7,3 @@ def insertion_sort(lista):
             Ind -= 1
         lista[Ind] = Val
     return lista
-

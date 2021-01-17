@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 class PQueue:
 
     def __init__(self):
@@ -23,5 +17,4 @@ class PQueue:
         for i in range(1, len(self.items)):
             if self.items[i] > self.items[maxx]:
                 maxx = i
-        return self.items.pop(maxx) 
-
+        return self.items.pop(maxx)

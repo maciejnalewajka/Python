@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 def merge_sort(lista):
     if len(lista) > 1:
         mid = len(lista) // 2
@@ -29,4 +23,3 @@ def merge_sort(lista):
             j +=1
             k +=1
     return lista
-

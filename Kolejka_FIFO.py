@@ -1,12 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 class Node:
     """Klasa Węzeł"""
-    
+
     def __init__(self, dane=None, next_node=None):
         self.dane = dane
         self.next_node  = next_node
@@ -15,7 +9,7 @@ class Node:
 
 class Queue:
     """Klasa Kolejka FIFO"""
-    
+
     def __init__(self):
         self.size = 0
         self._head = None
@@ -45,4 +39,3 @@ class Queue:
         if self.isEmpty():
             raise ValueError("Kolejka FIFO jest pusta!")
         return self._head.dane
-

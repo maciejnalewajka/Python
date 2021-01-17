@@ -1,31 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 #NWD
-
 def gcd(a, b):
     while b != 0:
         b, a = a % b, b
     return a
 
-
-# In[8]:
-
-
 # NWW
-
 def lcm(a, b):
     return abs( a * b / gcd(a, b) )
 
-
-# In[9]:
-
-
 # Hanoi
-
 def hanoi(n, source, helper, target):
     if n > 0:
         hanoi(n - 1, source, target, helper)
@@ -33,12 +16,7 @@ def hanoi(n, source, helper, target):
             target.append(source.pop())
         hanoi(n - 1, helper, source, target)
 
-
-# In[10]:
-
-
 # Anagram
-
 def delSpac(s):
     s_new = s.replace(" ","")
     return s_new
@@ -56,4 +34,3 @@ def anagram(s1,s2):
         else:
             matches = False
     return matches
-
