@@ -8,6 +8,8 @@ Proin sed mauris nec felis porta imperdiet nec id lectus. Praesent sit amet arcu
 
 Etiam congue mi et vulputate scelerisque. Quisque consectetur mi dapibus dolor imperdiet, hendrerit luctus mauris mollis. Ut ornare tortor quis nibh imperdiet, vel scelerisque quam molestie. Morbi eget finibus elit. Ut dui turpis, lobortis a auctor id, posuere eget lectus. Sed bibendum ullamcorper purus. Aliquam non nunc ac sem fermentum euismod eget ut mi. In scelerisque nibh odio, et tincidunt massa molestie quis. Cras euismod tristique porta. Mauris eu feugiat turpis. Ut sed justo finibus, pellentesque lectus eu, ultrices urna. Nam dolor nisl, aliquet eget lobortis a, congue at nisl."""
 
+string_2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
 # Zadanie 1
 """Policz wszystkie wystąpienia znaków w tekście. Przedstaw je w postaci słownika.
 a) rozróżniaj małe i duże znaki
@@ -42,3 +44,18 @@ def zadanie_2(string, stary_znak, nowy_znak):
     return nowy_string
 
 # print(zadanie_2(string, 'a', '?'))
+
+# Zadanie 3
+"""Przedstaw znane Ci sposoby formatowania tekstu."""
+
+def zadanie_3(string):
+    rab = " rabarbar"
+    print(string + "%s" % (rab))
+    print("%s%s" % (string, rab))
+    print("%s" % (string) + rab)
+    print("{}".format(string) + "%s" % (rab))
+    print("{}{}".format(string, rab))
+    print(f"{string}{rab}")
+    print(f"{string}" + "%s" % rab)
+
+# zadanie_3(string_2)
