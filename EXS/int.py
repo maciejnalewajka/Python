@@ -1,7 +1,5 @@
 x = 12
 y = 5
-z = "2"
-v = "2.3"
 
 # Zadanie 1
 """Napisz program, który wykona dodawanie, odejmowanie, dzielenie, mnożenie, potęgowanie, dzielenie bez reszty oraz poda resztę z dzielenia dwóch podanych liczb"""
